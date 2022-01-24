@@ -1,0 +1,20 @@
+{
+  "name": "systembanking",
+  "version": "1.0.0",
+  "description": "Project to train concepts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielvfDelgado/systemBaking.git"
+  },
+  "author": "Gabriel Delgado",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/GabrielvfDelgado/systemBaking/issues"
+  },
+  "homepage": "https://github.com/GabrielvfDelgado/systemBaking#readme"
+}
