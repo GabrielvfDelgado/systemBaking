@@ -1,19 +1,26 @@
 import { Cliente } from "./Cliente.js";
 import { ContaCorrente } from "./ContaCorrente.js";
 
-const client1 = new Cliente();
+//criar clientes
+const cliente1 = new Cliente("Fulano", 77784865133);
+const cliente2 = new Cliente("Gabriel", 894874987897);
 
-client1.nome = "Gabriel";
-client1.cpf = "5464878665";
+//criar contas
+const ContaCorrenteGabriel = new ContaCorrente(1001, cliente2);
+ContaCorrenteGabriel.depositar(600);
+const ContaCorrenteFulano = new ContaCorrente(1001, cliente1);
 
-const ContaCorrenteGabriel = new ContaCorrente();
+//exibir contas
+ContaCorrenteGabriel.exibir();
+ContaCorrenteFulano.exibir();
 
-ContaCorrenteGabriel.agencia = 1001;
-ContaCorrenteGabriel.depositar(100);
+//transferencia
+ContaCorrenteGabriel.transferir(100, ContaCorrenteFulano);
 
-const valorSacado = ContaCorrenteGabriel.sacar(20);
+//exibir pos transferencia
+ContaCorrenteGabriel.exibir();
+ContaCorrenteFulano.exibir();
 
-console.log(valorSacado);
-console.log(ContaCorrenteGabriel);
-let valor = ContaCorrenteGabriel.retornarSaldo();
-console.log(`Seu saldo é de ${valor}`);
+console.log(
+  `Numero de contas no sistema sao de: ${ContaCorrente.numeroContas}`
+);
